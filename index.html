@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="quoteBook" ng-controller="mainController">
+    <head>
+        <meta charset="utf-8">
+        <title>Quote Book App | version never.0</title>
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+    <body>
+        <header class="header">
+            <p>Quote Book App</p>
+        </header>
+
+        <!--Enter New Quotes and Filter-->
+        <div class="new-quote-container">
+
+        <input type="text" placeholder="Enter a new quote . . ." ng-model="newQuote">
+        <input type="text" placeholder="Enter the quote's author . . ." ng-model="newAuthor">
+        <button ng-click="addQuote(newQuote, newAuthor); trigger = trigger + 1">Add New Quote</button>
+
+        </div>
+
+        <input class="filter-box" type="text" placeholder="Sort by text or author" ng-model="filterQuotes">
+
+        <!--Quotes-->
+
+        <p class="quote-wrapper" ng-repeat="quote in quotes | filter: filterQuotes | orderBy : 'author'">
+            <span class="big-quotes">"</span>
+            <span class="text">{{quote.text}}</span>
+            <span class="big-quotes">"</span>
+            <span class="author">{{quote.author}}</span>
+            <button class="button" ng-click="deleteQuote(quote)">Delete</button>
+        </p>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+        <script type="text/javascript" src="controller.js"></script>
+        <script type="text/javascript" src="dataService.js"></script>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
+
+body {
+  background-color: #e2feeb;
+}
+
+.header {
+  background-color: #9dbb99;
+  text-align: center;
+  width: 100%;
+  height: 150px;
+  border: 4px solid #546153;
+  font-size: 36px;
+  font-family: Lato;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.header > p {
+  color: white;
+  margin-top: 45px;
+}
+
+.new-quote-container {
+  margin-top: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #72d465;
+}
+
+.filter-box {
+  border: 2px solid black;
+  margin-top: 10px;
+}
+.quote-wrapper {
+  background-color: #f6fffb;
+  border: 2px solid #b3b3b3;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 1em;
+}
+
+.text {
+  font-family: Lato;
+  font-weight: 400;
+  padding: 0px auto;
+}
+
+.author {
+  font-family: fantasy;
+  color: #717171;
+}
+
+.big-quotes {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.button {
+  display: inline-block;
+  height: 50%;
+}
